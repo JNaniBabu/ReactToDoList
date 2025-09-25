@@ -26,7 +26,7 @@ function App() {
         }
         else{
           setErrorEmpty(false)
-          let data=JSON.parse(localStorage.getItem('items'))
+          let data=localStorage.getItem('items').length ?JSON.parse(localStorage.getItem('items')): [];
           let check=data ? data.some(item=> item === v1):false;
           setDuplicate(check)
           if (check){
@@ -60,14 +60,10 @@ function App() {
              location.reload()
 
        }
-
-
-
        setItems(newitems)
        
     }
-  
-     
+    
   return (
       <div className="parent">
         <div className="block">

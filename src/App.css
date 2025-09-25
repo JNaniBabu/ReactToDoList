@@ -4,6 +4,7 @@
 .parent{
   width: 100%;height: 100vh;background-color: black;
   display: flex;justify-content: center;align-items: center;
+  padding: 10px;
 }
 .block{
   width: 600px;
@@ -75,7 +76,7 @@
 
 }
 .item>h6{
-  max-width:60%;  
+  width:60%;  
   word-wrap: break-word;
   text-align: left;
   padding: 5px;
@@ -101,3 +102,50 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+ @media (max-width: 480px) {
+    .parent{
+      padding: 10px;
+    }
+    .InputBLOCK{
+       flex-direction: column;
+       justify-content: center;
+       gap: 5px;
+       align-items: flex-end;
+       padding: 0px;
+    }
+    .InputBLOCK>input[type="text"]{
+        width: 100%;
+        padding: 2px;
+        font-size: 1.2rem;
+        
+    }
+    .InputBLOCK>button{
+        width: 40%;
+        height: 30px;
+    }
+    .item{
+          width: 100%;
+          padding:5px;
+          margin-top: 4px;
+
+          display: flex;
+          flex-direction:column;
+          justify-content:left;
+          align-items: center;
+    }
+    .item>h6{
+        width: 100%;
+        text-align:left;
+        padding: 4px;
+        font-size: 1.1rem;
+        word-break: break-all;
+    }
+    .options{
+       width: 100%;
+       display: flex;
+       justify-content: right;
+       padding: 5px;
+       margin-top: 5px;
+    }
+} 
