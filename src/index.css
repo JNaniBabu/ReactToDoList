@@ -25,7 +25,7 @@
    gap: 10px;
 }
 input[type='text']{
-   width: 90%;
+   width: 85%;
    height: 100%;
 
    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -41,6 +41,9 @@ input[type='text']{
 input[type='text']:focus{
    border: 1px solid transparent;
    outline: none;
+}
+.input>button{
+   width: 15%;
 }
 .details{
    width: 50%;

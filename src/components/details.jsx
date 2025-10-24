@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { MdOutlineEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import { IoCheckmarkDoneSharp } from "react-icons/io5";
 
 function Details({ history, UpdateAfterDelete, HandleEditValue }) {
   let Data = [];
@@ -88,7 +91,7 @@ let handleSave=(i)=>{
               style={DoneItemIndex.includes(i) || EditOption.includes(i)  ? { display: "none" } : {display: "block" }}
               onClick={() => handleDone(i)}
             >
-              Done
+             <IoCheckmarkDoneSharp />
             </button>
             <button
               type="button"
@@ -96,7 +99,8 @@ let handleSave=(i)=>{
               style={DoneItemIndex.includes(i) || EditOption.includes(i) ? { display: "none" } : {display: "block" }}
               onClick={() => handleEdit(i)}
             >
-              Edit
+             <MdOutlineEdit />
+
             </button>
             <button
               type="button"
@@ -112,7 +116,7 @@ let handleSave=(i)=>{
               onClick={() => handleDelete(i)}
               style={!EditOption.includes(i) ?{display:"block"}:{display:"none"}}
             >
-              Delete
+              <MdDelete />
             </button>
           </div>
         </li>
