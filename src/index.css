@@ -1,0 +1,131 @@
+
+.parent{
+   width: 100vw;
+   height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+.input{
+
+   background-color: black;
+   height: 70px;
+   width: 50%;
+   padding: 10px;
+   border-radius: 10px;
+
+   display: flex;
+  
+   gap: 10px;
+}
+input[type='text']{
+   width: 90%;
+   height: 100%;
+
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size:1.2rem;
+   color: aliceblue;
+   border-radius: 3px;
+   border:  1px solid black;
+   padding: 5px;
+
+   background-color: rgb(40, 40, 40);
+
+}
+input[type='text']:focus{
+   border: 1px solid transparent;
+   outline: none;
+}
+.details{
+   width: 50%;
+   max-height: 400px;
+   
+   padding:10px;
+   background-color: black;
+   
+   border-radius: 10px;
+   color: rgb(254, 254, 254);
+
+   
+
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   list-style-type: none;
+   gap: 5px;
+
+   overflow: scroll;
+   scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.details::-webkit-scrollbar {
+  display: none;
+}
+
+li{
+   width: 100%;
+   border: 1px solid white ;
+   border-radius: 5px;
+   padding: 5px ;
+
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
+}
+li>.item{
+   width: 60%;
+   padding: 5px;
+   display: flex;
+   align-items: center;
+   word-break: break-all;
+   margin-right: 20px;
+
+   font-size: 1.1rem;
+   background-color:transparent;
+   border: 1px solid transparent;
+
+   color: aliceblue;
+
+}
+li>.item:focus{
+   outline: none;
+  border-color: transparent;
+}
+.buttons>button{
+  height: 40px;
+}
+.buttons{
+   width: 40%;
+   display: flex;
+   justify-content:right;
+   align-items:center;
+   gap: 10px;
+   
+}
+
+@media (max-width:1000px) {
+   .input{
+      width: 100%;
+   }
+   .details{
+      width: 100%;
+   }
+   li{
+      flex-direction: column;
+   }
+   li>.item{
+      width: 100%; 
+   }
+   li>.buttons{
+      width: 100%;
+
+   }
+   
+}
